@@ -23,8 +23,8 @@ void Counter::count()
     {
         auto future = std::async([&mutex, thread_number]() -> Sums {
             Sums sums{};
-            auto from = static_cast<short>((kNotation + 1) * (thread_number) / kThreads);
-            auto to = static_cast<short>((kNotation + 1) * (thread_number + 1) / kThreads);
+            auto from = static_cast<short>((kNotation ) * (thread_number) / kThreads);
+            auto to = static_cast<short>((kNotation ) * (thread_number + 1) / kThreads);
 
             auto sum = 0;
             {
@@ -34,19 +34,19 @@ void Counter::count()
             for (short i1 = from; i1 < to; ++i1)
             {
                 sum += i1;
-                for (short i2 = 0; i2 < kNotation + 1; ++i2)
+                for (short i2 = 0; i2 < kNotation ; ++i2)
                 {
                     sum += i2;
-                    for (short i3 = 0; i3 < kNotation + 1; ++i3)
+                    for (short i3 = 0; i3 < kNotation ; ++i3)
                     {
                         sum += i3;
-                        for (short i4 = 0; i4 < kNotation + 1; ++i4)
+                        for (short i4 = 0; i4 < kNotation ; ++i4)
                         {
                             sum += i4;
-                            for (short i5 = 0; i5 < kNotation + 1; ++i5)
+                            for (short i5 = 0; i5 < kNotation ; ++i5)
                             {
                                 sum += i5;
-                                for (short i6 = 0; i6 < kNotation + 1; ++i6)
+                                for (short i6 = 0; i6 < kNotation ; ++i6)
                                 {
                                     sum += i6;
                                     sums.insert(sum);
