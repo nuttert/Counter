@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  it_p:
+    container_name: it_p
+    build: 
+      context: ./
+      dockerfile: DockerFile
+    volumes: 
+      - ./:/app
